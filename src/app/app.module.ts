@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MessageComponent } from './entity/message/message.component';
-import { UserComponent } from './entity/user/user.component';
 import { FileComponent } from './entity/file/file.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessageComponent,
-    UserComponent,
     FileComponent
   ],
   imports: [
