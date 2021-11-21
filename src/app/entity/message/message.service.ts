@@ -10,7 +10,7 @@ export class MessageService {
 
   constructor(public http: HttpClient,
     ) { }
-  api =  environment.baseUrl + "/api/xabar"
+  api =  environment.baseUrl + "/api/message"
 
   getAll(): Observable<any>{
     return this.http.get<any>(this.api)

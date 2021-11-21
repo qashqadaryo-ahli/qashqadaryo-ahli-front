@@ -1,0 +1,111 @@
+// import { Injectable } from '@angular/core';
+// import { Router } from '@angular/router';
+// import { HttpClient } from '@angular/common/http';
+
+// import { Observable, ReplaySubject, of } from 'rxjs';
+// import { shareReplay, tap, catchError, map } from 'rxjs/operators';
+// import { User } from '../shared/model/user';
+// import { environment } from 'src/environments/environment';
+
+// @Injectable({ providedIn: 'root' })
+// export class AccountService {
+//   private userIdentity: User | null = null;
+//   private authenticationState = new ReplaySubject<User | null>(1);
+//   private userCache$?: Observable<User | null>;
+//   private baseApi = environment.baseUrl + "/api/account";
+//   constructor(
+//     private http: HttpClient,
+//     private router: Router,
+//   ) {}
+
+//   save(user: User): Observable<{}> {
+//     return this.http.post(this.baseApi, user);
+//   }
+
+//   authenticate(identity: User | null): void {
+//     this.userIdentity = identity;
+//     this.authenticationState.next(this.userIdentity);
+//   }
+
+//   hasAnyAuthority(lavozimlar: string[] | string): boolean {
+//     if (!this.userIdentity) {
+//       return false;
+//     }
+//     if (!Array.isArray(lavozimlar)) {
+//       lavozimlar = [lavozimlar];
+//     }
+//     return this.userIdentity.lavozimlar.some((lavozim: string) => lavozimlar.includes(lavozim));
+//   }
+
+//   identity(force?: boolean): Observable<User | null> {
+
+//     if (!this.userCache$ || force || !this.isAuthenticated()) {
+//       this.userCache$ = this.fetch().pipe(
+//         catchError((e) => {
+//                 console.log('xatolik', e);
+
+//                 return of(null)}),
+//         map((res)=>{
+//           this.authenticate(res);
+//           return res;
+
+//         })
+//       );
+
+//     //   this.userCache$ = this.fetch().pipe(
+//     //     catchError((e) => {
+//     //       console.log('xatolik', e);
+
+//     //       return of(null)}),
+//     //     tap((user: User | null) => {
+//     //       console.log('user keldi');
+
+
+//     //       this.authenticate(user);
+
+//     //       // After retrieve the User info, the language will be changed to
+//     //       // the user's preferred language configured in the User setting
+//     //       // if (User?.langKey) {
+//     //       //   const langKey = this.sessionStorage.retrieve('locale') ?? User.langKey;
+//     //       //   this.translateService.use(langKey);
+//     //       // }
+
+//     //       if (user) {
+//     //         //this.navigateToStoredUrl();
+//     //       }
+//     //     }),
+//     //     shareReplay()
+//     //   );
+//    }
+//     return this.userCache$;
+//   }
+
+//   isAuthenticated(): boolean {
+//     return this.userIdentity !== null;
+//   }
+
+//   getAuthenticationState(): Observable<User | null> {
+//     return this.authenticationState.asObservable();
+//   }
+
+//   // getImageUrl(): string {
+//   //   return this.userIdentity?.imageUrl ?? '';
+//   // }
+
+//   private fetch(): Observable<User> {
+//     console.log('fetching . . .');
+
+//     return this.http.get<User>(this.baseApi);
+
+//   }
+
+//   // private navigateToStoredUrl(): void {
+//   //   // previousState can be set in the authExpiredInterceptor and in the userRouteAccessService
+//   //   // if login is successful, go to stored previousState and clear previousState
+//   //   const previousUrl = this.stateStorageService.getUrl();
+//   //   if (previousUrl) {
+//   //     this.stateStorageService.clearUrl();
+//   //     this.router.navigateByUrl(previousUrl);
+//   //   }
+//   // }
+// }
