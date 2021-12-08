@@ -1,0 +1,56 @@
+.body{
+    // background-image: url(../../assets/you\ tube\ img.jpg);
+    background: #EEEEEE;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 30px;
+}
+.container1{
+    margin: auto;
+}
+
+@media screen and (max-width: 1520px) {
+    //this
+    .container1{
+        width: 95% !important;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 1520px) {
+    //this
+    .container1{
+        width: 1350px !important;
+    }
+}
+
+// Cardlarga berilgan style
+.card{
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.video{
+    width: 100%;
+    height: 300px;
+}
+
+.title{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.text{
+    margin-top: 7px;
+    font-size: large;
+    font-weight: 500;
+}
+@media screen and (max-width: 599px) {
+    
+    .video{
+        width: 100%;
+        height: 206px;
+    }
+}

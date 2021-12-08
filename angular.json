@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "qashqadaryo-ahli-front": {
+    "qashqadaryo-ahli-new-new": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/qashqadaryo-ahli-front",
+            "outputPath": "dist/qashqadaryo-ahli-new-new",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -75,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "qashqadaryo-ahli-front:build:production"
+              "browserTarget": "qashqadaryo-ahli-new-new:build:production"
             },
             "development": {
-              "browserTarget": "qashqadaryo-ahli-front:build:development"
+              "browserTarget": "qashqadaryo-ahli-new-new:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "qashqadaryo-ahli-front:build"
+            "browserTarget": "qashqadaryo-ahli-new-new:build"
           }
         },
         "test": {
@@ -102,6 +101,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "qashqadaryo-ahli-front"
+  "defaultProject": "qashqadaryo-ahli-new-new"
 }

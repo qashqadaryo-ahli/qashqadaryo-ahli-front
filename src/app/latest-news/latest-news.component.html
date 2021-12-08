@@ -1,0 +1,33 @@
+<section class="container1">
+    <h2 class="title">Сўнги янгиликлар</h2>
+    <div class="container">
+
+        <div fxLayout="row wrap">
+
+                <div fxFlex="100%" fxFlex.sm="50%" *ngFor="let message of latestNewsMessages" fxFlex.xs="100%" fxLayoutGap="10px" >
+                    <a routerLink="/type">
+                        <div class="card" fxLayout.xs="row" fxLayout.sm="row" fxLayout="column">
+                            <div class="card-img" fxFlex="5 1 0">
+                                <img class="img" *ngIf="message?.image == null" src="../../assets/background-screening.jpg">
+                                <app-image-download *ngIf="message?.image != null" [faylId]="message?.image?.id"></app-image-download>
+                            </div>
+                            <div fxFlex="10 1 0">
+                                <div class="data-time">
+                                    <mat-icon class="mat-icon">date_range</mat-icon><span
+                                        class="type">{{message?.types?.name}}</span>&nbsp;/&nbsp;
+                                    {{message?.dateTime}}
+                                </div>
+                                <p class="text">{{message?.caption}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+        </div>
+
+
+
+
+    </div>
+</section>

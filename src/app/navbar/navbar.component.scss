@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: 10px;
+}
+
+.container{
+    margin: auto;
+}
+
+@media screen and (max-width: 1520px) {
+    
+    //this
+    .container{
+        width: 95% !important;
+        margin: auto;
+    
+    }
+
+
+}
+@media screen and (min-width: 1520px) {
+    
+    //this
+    .container{
+        width: 1350px;
+    }
+
+
+}
+
+.navbar{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-bottom: solid 1px #707070;
+    padding-top: 13px;
+    padding-bottom: 22px;
+}
+
+.navbar-brand{
+    display: inline;
+}
+
+
+.navbar .navbar-brand img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-links ul li{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline;
+}
+
+.nav-links ul li a{
+    color: #707070;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.nav-links ul{
+    display: inline;
+    // border: solid 1px #000;
+    border-radius: 10px;
+    background-color: #ECECEC;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.nav-links{
+    display: block;
+    width: auto;
+    margin-top: -35px;
+    text-align: center;
+}
+
+.float-right{
+    float: right;
+    margin-top: -25px;
+}
+.float-right .nav-search {
+    border-radius: 50%;
+    background-color: #ECECEC;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.menu-icon{
+    display: none;
+}
+.search-icon{
+    display: none;
+}
+
+.brand-logo{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 599px) {
+    
+.nav-links {
+    display: none;
+}
+.float-right .nav-search {
+    display: none;
+}
+.menu-icon{
+    display: block;
+    margin-top: 26px;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    color: #4A5568;
+}
+    .logo-img{
+       position: absolute;
+       left: 45%;
+       top: 8px;
+    }
+
+    .search-icon{
+        display: inline-block;
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        color: #4A5568;
+        list-style: none;
+    }
+
+}
+

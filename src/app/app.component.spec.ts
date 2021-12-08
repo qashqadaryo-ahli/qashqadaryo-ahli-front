@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'qashqadaryo-ahli-front'`, () => {
+  it(`should have as title 'qashqadaryo-ahli-new-new'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('qashqadaryo-ahli-front');
+    expect(app.title).toEqual('qashqadaryo-ahli-new-new');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('qashqadaryo-ahli-front app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('qashqadaryo-ahli-new-new app is running!');
   });
 });
