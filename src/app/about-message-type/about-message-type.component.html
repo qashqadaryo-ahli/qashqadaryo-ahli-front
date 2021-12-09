@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">
+        Shunga оид сўнги янгиликлар
+    </div>
+    <div fxLayout="row wrap">
+        <div fxFlex="25%" fxFlex.xs="50%" fxFlex.sm="33%" *ngFor="let message of hashtagMessages" (click)="openMessage(message?.id)">
+            <div class="card">
+                <img class="img" src="../../assets/hokim.jpg">
+                <div class="data-time">
+                    <i class="far fa-newspaper" id="icon-newspaper"></i>
+                    <span class="type">{{message?.types?.name}}
+                        </span>/ {{message?.dateTime}}
+                </div>
+                <div class="text2">{{message?.caption}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayoutGap="10px">
+            <div class="button-card">
+                <button class="button" (click)="koproq()" mat-flat-button color="primary">Кўпроқ ўқиш</button>
+            </div>
+    </div>
+</div>

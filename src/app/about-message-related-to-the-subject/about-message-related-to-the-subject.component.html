@@ -1,16 +1,17 @@
 <section class="container1">
-    <h2 class="title">Енг кўп ўқилганлар</h2>
+    <h2 class="title">Мавзуга оид</h2>
     <div class="container">
 
         <div fxLayout="row wrap">
-            <div fxFlex="100%" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let message of viewMessages" fxLayoutGap="10px" (click)="openMessage(message?.id)">
+            <div fxFlex="100%" fxFlex.sm="50%" *ngFor="let message of titleMessages" (click)="openMessage(message.id)">
                 <a>
-                    <div class="card" fxLayout.xs="row" fxLayout.sm="row" fxLayout="column">
-                        <div class="card-img" fxFlex="5 1 0">
-                            <img class="img" *ngIf="message?.image == null" src="../../assets/hokim.jpg">
+                    <div class="card" fxLayout.xs="row" fxLayout.sm="row" fxLayout="row">
+                        <div class="card-img" fxFlex="4 1 0">
+                            <img class="img" *ngIf="message?.image == null" src="../../assets/images (5).jpg">
                             <app-image-download [faylId]="message?.image?.id"></app-image-download>
+                        
                         </div>
-                        <div fxFlex="10 1 0">
+                        <div fxFlex="10 1 0" class="border-bottom">
                             <div class="data-time">
                                 <mat-icon class="mat-icon">date_range</mat-icon><span
                                     class="type">{{message?.types?.name}}</span>&nbsp;/&nbsp;
@@ -23,8 +24,6 @@
                 </a>
             </div>
         </div>
-
-      
 
 
     </div>
